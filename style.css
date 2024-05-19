@@ -1,0 +1,132 @@
+/*estilo de index.html*/
+
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    
+  }
+  
+  .centrado{
+    margin: 0 auto;
+    padding: 0 1em;
+  }
+  
+  .site-branding{
+    text-align: center;
+    margin: 1 1 1em;
+    padding: 1em 0;
+  }
+  
+   .parrafo-contenido{
+     padding: 1.4em;
+   }
+  
+  .parrafo-contenido h1{
+    margin-top: 0;
+    margin-bottom: .5em;
+    font-weight: normal;
+  }
+  
+  .parrafo-contenido p{
+    font-size: 90%;
+  }
+  
+  figure {
+    margin: 0;
+  }
+  
+  img {
+    display: block;
+    border: 0;
+    width: 100%;
+  }
+  @media scren and (min-width:52em){
+    .centrado{
+     max-width: 52em;
+    }
+  }
+  
+  .encabezado{
+    display: flex;
+    height: 70px;
+    background-color: #e0aee6;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .site-branding img{
+    max-height: 80px;
+    width:auto;
+  }
+  
+  .menu-de-opciones ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+      
+  }
+  
+  .menu-de-opciones li a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 0.5em 1em;
+  }
+  
+  .menu-de-opciones li a:hover{
+    color: #ffffff;
+    background-color: #d2aed1;
+  }
+    
+  /*aca empieza el flexbox*/
+  
+  .menu-de-opciones ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .menu-de-opciones li {
+    flex: 1 0 auto; /*1 arriba 0 abajo auto izq y der*/
+    text-align: center;
+  }
+  
+  /*
+  html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+      background: rgb(255, 255, 255);
+      color: #000;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  }
+  
+  .Contenedor{
+    background-color: #72c7e4;
+    paddin: 10px;
+    border-bottom: 10px;
+  }
+  
+  
+  
+  .Páginas{
+    width: 90%;
+    max-width: 1000px;
+    background-color: #cfa5ca;
+    margin: 20px auto;
+    gap: 20fr; 
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(3, auto);
+  
+  }
+  
+  
+  div{
+    background-color: lightgrey;
+  }
