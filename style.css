@@ -1,132 +1,136 @@
 /*estilo de index.html*/
 
-
+/* Estilos generales*/
 body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8;
     margin: 0;
-    
+    padding: 0;
   }
   
-  .centrado{
-    margin: 0 auto;
-    padding: 0 1em;
-  }
-  
-  .site-branding{
-    text-align: center;
-    margin: 1 1 1em;
-    padding: 1em 0;
-  }
-  
-   .parrafo-contenido{
-     padding: 1.4em;
-   }
-  
-  .parrafo-contenido h1{
-    margin-top: 0;
-    margin-bottom: .5em;
-    font-weight: normal;
-  }
-  
-  .parrafo-contenido p{
-    font-size: 90%;
-  }
-  
-  figure {
-    margin: 0;
-  }
-  
-  img {
-    display: block;
-    border: 0;
-    width: 100%;
-  }
-  @media scren and (min-width:52em){
-    .centrado{
-     max-width: 52em;
-    }
-  }
-  
-  .encabezado{
-    display: flex;
-    height: 70px;
+  /*Encabezado*/
+
+  .encabezado {
     background-color: #e0aee6;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    margin: auto;
+    /* height: 70px;*/
   }
-  
-  .site-branding img{
-    max-height: 80px;
-    width:auto;
+   
+  .site-branding img {
+   /* text-align: center;
+    margin: 1 1 1em;
+    padding: 1em 0;*/
+    width: 100px; /* Ajusta el tamano del logo segun sea necesario*/
   }
-  
-  .menu-de-opciones ul{
+
+  .nombre-empresa {
+    margin: 0;
+    font-size: 24px;
+  }
+
+  .menu-de-opciones ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-      
+    display: flex;
+  }
+
+  .menu-de-opciones li {
+    margin-right: 20px;
   }
   
-  .menu-de-opciones li a{
+  .menu-de-opciones a {
     display: block;
     text-decoration: none;
-    color: black;
+    color: #333333;
     padding: 0.5em 1em;
+    font-size: 16px;
   }
   
-  .menu-de-opciones li a:hover{
-    color: #ffffff;
-    background-color: #d2aed1;
+  .menu-de-opciones a:hover {
+    color: #007bff; /* Cambia el color al pasar el cursor sobre enlaces*/
   }
-    
-  /*aca empieza el flexbox*/
   
-  .menu-de-opciones ul{
+  /* Secciones de contenido*/
+
+  .centrado { 
+    max-width: 1200px;
+    margin: 0 auto;
+    /*padding: 0 1em;*/
+    padding: 20px;
+    /*background-color: #ffffff;
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+    /*display: flex;*/
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .parrafos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between; /* para que queden bien distribuidas en la pantalla */
+    margin-top: 10px;
   }
   
-  .menu-de-opciones li {
-    flex: 1 0 auto; /*1 arriba 0 abajo auto izq y der*/
-    text-align: center;
+  .parrafo {
+    flex-basis: 30%; /* Ajusta el ancho de los articulos segun sea necesario*/
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+
+  .parrafo-contenido h1 {
+    margin-top: 0;
+    font-size: 20px;
+   /* margin-bottom: .5em;
+   /*font-weight: normal;*/
   }
   
-  /*
-  html {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+  .parrafo-contenido p {
+    font-size: 16px;
   }
-  
-  body{
-      background: rgb(255, 255, 255);
-      color: #000;
-      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+
+  .parrafo img {
+    width: 100%; /* Ajusta el tamaño de la imagen al contenedor */
   }
-  
-  .Contenedor{
-    background-color: #72c7e4;
-    paddin: 10px;
-    border-bottom: 10px;
+
+  /* Media Queries para tamaños de pantalla */
+  @media screen and (max-width: 768px) {
+     /* Estilos para tablet */
+     .parrafos {
+        flex-direction: column;
+     }
+
+     .parrafo {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+     }
   }
-  
-  
-  
-  .Páginas{
-    width: 90%;
-    max-width: 1000px;
-    background-color: #cfa5ca;
-    margin: 20px auto;
-    gap: 20fr; 
-    grid-template-columns: repeat(1,1fr);
-    grid-template-rows: repeat(3, auto);
-  
+
+  @media screen and (max-width: 576px) {
+    /* Estilos para celular */
+    .encabezado {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .site-branding img {
+        margin-bottom: 10px; /* Ajusta el margen inf. del logo segun sea necesario*/ 
+    }
+
+    .nombre-empresa { /* Ajusta el tamaño del nombre de la empresa segun sea necesario*/
+        font-size: 20px;
+    }
+
+    .menu-de-opciones ul { /* Ajusta el margen sup. del menu de opciones segun sea necesario*/
+        margin-top: 10px;
+    }
   }
+
   
-  
-  div{
-    background-color: lightgrey;
-  }
