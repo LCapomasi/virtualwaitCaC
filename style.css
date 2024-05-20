@@ -100,6 +100,47 @@ body {
     width: 100%; /* Ajusta el tamaño de la imagen al contenedor */
   }
 
+ /* Estilos para el footer*/
+  footer { 
+    background-color: #e0aee6;
+    color:#fff;
+    padding: 20px 0; /*Espaciado interno (abajo, arriba, izq y der)*/
+
+  }
+  .contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .iconos-footer {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+
+  .iconos-footer li {
+    margin-right: 15px; /* Espacio entre elementos*/
+  }
+
+  .iconos-footer li:last-child {
+    margin-right: 0; /* Elimina el margen derecho del ultimo elemento*/   
+  }
+
+  .iconos-footer a {
+    color:  #333333;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  .iconos-footer a:hover {
+    opacity: 0.7;
+  }
+
   /* Media Queries para tamaños de pantalla */
   @media screen and (max-width: 768px) {
      /* Estilos para tablet */
@@ -110,6 +151,15 @@ body {
      .parrafo {
         flex-basis: 100%;
         margin-bottom: 20px;
+     }
+
+     .contenedor {
+        flex-direction: column;
+        align-items: flex-start;
+     }
+
+     .iconos-footer {
+        margin-top: 10px;
      }
   }
 
@@ -130,6 +180,16 @@ body {
 
     .menu-de-opciones ul { /* Ajusta el margen sup. del menu de opciones segun sea necesario*/
         margin-top: 10px;
+    }
+
+    .menu-de-opciones li {
+        font-size: 10px;
+        margin-bottom: auto;
+    }
+
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
     }
   }
 
