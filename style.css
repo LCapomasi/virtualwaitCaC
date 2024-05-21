@@ -22,9 +22,9 @@ body {
   }
    
   .site-branding img {
-   /* text-align: center;
-    margin: 1 1 1em;
-    padding: 1em 0;*/
+    padding: 3px;
+    border-radius: 50%; /*crea un borde redondo */
+    background-color: transparent;
     width: 100px; /* Ajusta el tamano del logo segun sea necesario*/
   }
 
@@ -144,6 +144,19 @@ body {
   /* Media Queries para tamaños de pantalla */
   @media screen and (max-width: 768px) {
      /* Estilos para tablet */
+     .encabezado {
+      flex-direction: column;
+      align-items: center;
+     }
+
+     .site-branding img {
+      margin-bottom: 10px;
+     }
+
+     .nombre-empresa {
+      font-size: 20px;
+     }
+
      .parrafos {
         flex-direction: column;
      }
