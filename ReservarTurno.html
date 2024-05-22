@@ -1,75 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulario de Recepción</title>.
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReservarTurno</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <h1>Formulario de Recepción</h1>
-
-  <form action=" method=""target="">
-   
-    <div>
-    <label for=" nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" required>
-    </div>
-
-    <div>
-      <label for="apellido">Apellido:</label>
-      <input type="text" id="apellido" name="apellido" required>
-    </div>
-
-    <div>
-      <label for="edad">Edad:</label>
-      <input type="number" id="edad" name="edad" required>
-    </div>
-
-    <div>
-      <label for="DNI">DNI:</label>
-      <input type="number" id="DNI" name="DNI" required>
-    </div>
-
-    <div>
-      <label for="sexo">Sexo:</label>
-      <input type="radio" name="option" value="Femenino" required>Femenino
-      <input type="radio" name="option" value="Masculino" required>Masculino
-      <input type="radio" name="option" value="Otro" required>Otro
-    </div>
-
-    <div>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-
-    <div>
-      <label for="operación">Operación:</label>
-      <select id="operación" name="operación" required>
-        <option value="" disabled selected>Selecciona una opción</option>
-        <option value="sacarturno">Sacar turno</option>
-        <option value="cancelarturno">Cacncelar turno</option>
-      </select>
-    </div>
-
-    <div>
-      <label for="fehca">Fecha</label>
-      <input type="date" id="fecha" name="fecha" required>
-    </div>
-
-    <div>
-      <label for="motivo">Motivo:</label>
-      <input type="text" id="motivo" name="motivo" required>
-    </div>
-
-    <br>
-    <input type="submit" value="Enviar">
-    <input type="reset" value="Borrar">
 
 
+    <body>
+        <h1>Reserva de Turnos</h1>
+
+        <form class="ReservarTurno" action="">
+
+            <div class="item" id="item-nombre">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="item" id="item-apellido">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+            </div>
+
+            <div class="item" id="item-edad">
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" required>
+            </div>
+
+            <div class="item" id="item-DNI">
+                <label for="DNI">DNI:</label>
+                <input type="number" id="DNI" name="DNI" required>
+            </div>
+
+
+            <div class="item" itemid="item-sexo">
+                <label for="sexo">Sexo:</label>
+                <div class="Sexo">
+
+                    <label id="re" for="sexo-f">Femenino</label>
+                    <input type="radio" id="sexo1" name="sexo" value="Femenino">
+
+                    <label id="re" for="sexo-m">Masculino</label>
+                    <input type="radio" id="sexo1" name="sexo" value="Masculino">
+
+                    <label id="re" for="sexo-o">Otro</label>
+                    <input type="radio" id="sexo1" name="sexo" value="Otro">
+
+                </div>
+
+            </div>
+
+
+            <div class="item" id="item-email">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="item" id="item-operación">
+                <label for="operación">Operación:</label>
+                <select id="operación" name="operación" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="sacarturno">Sacar turno</option>
+                    <option value="cancelarturno">Cancelar turno</option>
+                </select>
+            </div>
+
+            <div class="item" id="item-fecha">
+                <label for="fecha">Fecha</label>
+                <input type="date" id="fecha" name="fecha" required>
+            </div>
+
+            <div class="item" id="item-motivo">
+                <label for="motivo">Motivo:</label>
+                <textarea type="text" id="motivo" name="motivo" required></textarea>
+            </div>
+
+
+            <div class="item">
+                <button class="botonenviar" type="submit" value="Enviar" class="botonenviar">Enviar</button>
+                <button class="botonborrar" type="reset" value="Borrar" class="botonborrar">Borrar</button>
+            </div>
+
+
+
+
+        </form>
 
 
 
@@ -86,12 +105,15 @@
 
 
 
-    <br>
-    <br>
-
-    <a href="index.html">Volver al inicio</a>
 
 
-</body>
+
+
+<script src="form"></script>
+
+
+
+
+    </body>
 
 </html>
