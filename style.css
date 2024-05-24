@@ -254,6 +254,7 @@ body {
     .encabezado {
         flex-direction: column;
         align-items: center;
+        padding-bottom: 10px;
     }
 
     .site-branding img {
@@ -264,18 +265,31 @@ body {
         font-size: 20px;
     }
 
+    .menu-de-opciones {
+      margin-top: 10px;
+    }
+
     .menu-de-opciones ul { /* Ajusta el margen sup. del menu de opciones segun sea necesario*/
-        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
     }
 
     .menu-de-opciones li {
-        font-size: 10px;
-        margin-bottom: auto;
+        margin-bottom: 10px;
+    }
+
+    .menu-de-opciones a {
+      font-size: 16px;
+      padding: 10px 20px;
     }
 
     .contenedor {
         flex-direction: column;
         align-items: center;
+    }
+
+    .iconos-footer {
+      margin-top: 20px;
     }
   }
 
