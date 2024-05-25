@@ -2,118 +2,165 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReservarTurno</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validación de Formulario con Javascript</title>
+  <!--Vicula la Hoja de Estilos General-->
+  <link rel="stylesheet" href="style.css">
+  <!--Vicula la Hoja de Estilos Especifica de esta pagina-->
+  <link rel="stylesheet" href="stylesform.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-ico">
 </head>
 
 <body>
+  <div class="centrado">
+    <header class="encabezado">
+        <div class="site-branding">
+          <a href="../index.html" class="logo-enlace">
+            <img src="images/logo virtual-wait.png" alt="logo">
+          </a>
+        </div>
+        <h2 class="nombre-empresa"> Virtual Wait </h2>
+        <nav class="menu-de-opciones">
+            <ul>
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="../SobreNosotros.html">Sobre Nosotros</a></li>
+              <li><a href="#">Reservar Turno</a></li>
+              <li><a href="../PreguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+            </ul>
+        </nav>
+    </header>
+     <br>
+     <h1>Reserva de Turnos</h1>
+    <main> 
+      <br>
+      <form action="" class="formulario" id="formulario">
+      <!-- Grupo: Nombre -->
+     <div class="formulario__grupo" id="grupo__nombre">
+         <label for="nombre" class="formulario__label">Nombre</label>
+         <div class="formulario__grupo-input">
+           <input type="text" class="formulario__input" name="nombre" id="nombre">
+         </div>
+       </div>
+  
+        <!-- Grupo: Apellido -->
+        <div class="formulario__grupo" id="grupo__apellido">
+          <label for="apellido" class="formulario__label">Apellido</label>
+          <div class="formulario__grupo-input">
+            <input type="text" class="formulario__input" name="apellido" id="apellido">
+          </div>
+        </div>
 
+      <!-- Grupo: Edad -->
+      <div class="formulario__grupo" id="grupo__edad">
+        <label for="edad" class="formulario__label">Edad</label>
+        <div class="formulario__grupo-input">
+          <input type="text" class="formulario__input" name="edad" id="edad">
+        </div>
+      </div>
 
-    <body>
-        <h1>Reserva de Turnos</h1>
+      <!-- Grupo: DNI -->
+      <div class="formulario__grupo" id="grupo__dni">
+        <label for="dni" class="formulario__label">DNI</label>
+        <div class="formulario__grupo-input">
+          <input type="text" class="formulario__input" name="dni" id="dni">
+        </div>
+      </div>
 
-        <form class="ReservarTurno" action="">
+           <!-- Grupo: Sexo -->
+      <div class="formulario__grupo" id="grupo__sexo">
+        <label class="formulario__label">Sexo:</label>
+        <div class="formulario__input">
+          <input type="radio" id="sexo-f" name="sexo" value="Femenino">
+          <label for="sexo-f" class="labelsexo">Femenino</label>
 
-            <div class="item" id="item-nombre">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-            </div>
+          <input type="radio" id="sexo-m" name="sexo" value="Masculino">
+          <label for="sexo-m" class="labelsexo">Masculino</label>
 
-            <div class="item" id="item-apellido">
-                <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido" name="apellido" required>
-            </div>
+          <input type="radio" id="sexo-o" name="sexo" value="Otro">
+          <label for="sexo-o" class="labelsexo">Otro</label>
+        </div>
+      </div>
 
-            <div class="item" id="item-edad">
-                <label for="edad">Edad:</label>
-                <input type="number" id="edad" name="edad" required>
-            </div>
+      <!-- Grupo: Correo Electrónico -->
+      <div class="formulario__grupo" id="grupo__email">
+        <label for="email" class="formulario__label">Email</label>
+        <div class="formulario__grupo-input">
+          <input type="email" class="formulario__input" name="email" id="email" placeholder="email@email.com">
+        </div>
+        <p class="formulario__input-error">El email solo puede contener letras, números, puntos, guiones y guion
+          bajo.</p>
+      </div>
 
-            <div class="item" id="item-DNI">
-                <label for="DNI">DNI:</label>
-                <input type="number" id="DNI" name="DNI" required>
-            </div>
+      <!-- Grupo: Operación -->
+      <div class="formulario__grupo" id="grupo__operacion">
+        <label for="operacion" class="formulario__label">Operación</label>
 
+        <select class="formulario__input" name="operacion" required id="operacion">
+          <option value="" disabled selected>Seleccione una opción</option>
+          <option value="sacarturno">Sacar turno</option>
+          <option value="cancelarturno">Cancelar turno</option>
+        </select>
+      </div>
 
-            <div class="item" itemid="item-sexo">
-                <label for="sexo">Sexo:</label>
-                <div class="Sexo">
+      <!-- Grupo: Fecha -->
+      <div class="formulario__grupo" id="grupo__fecha">
+        <label for="fecha" class="formulario__label">Fecha</label>
+        <input type="date" class="formulario__input" name="fecha" id="fecha" required>
+      </div>
 
-                    <label id="re" for="sexo-f">Femenino</label>
-                    <input type="radio" id="sexo1" name="sexo" value="Femenino">
+      <!-- Grupo: Motivo -->
+      <div class="formulario__grupo" id="grupo__motivo">
+        <label for="motivo" class="formulario__label">Motivo</label>
+        <textarea id="motivo" class="formulario__input" name="motivo" placeholder="Explique brevemente"></textarea>
+        <div id="contador" class="contador">300 caracteres restantes</div>
+      </div>
 
-                    <label id="re" for="sexo-m">Masculino</label>
-                    <input type="radio" id="sexo1" name="sexo" value="Masculino">
+      <!-- Grupo: Términos y Condiciones -->
+      <div id="grupo__terminos">
+        <label class="formulario__label_terminos">
+          <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos" required>
+          Acepto los Términos y Condiciones
+        </label>
+      </div>
 
-                    <label id="re" for="sexo-o">Otro</label>
-                    <input type="radio" id="sexo1" name="sexo" value="Otro">
+      <!-- Grupo botones -->
+      <div class="formulario__grupo" id="grupo__botones">
+        <div class="formulario__grupo formulario__grupo-btn-enviar">
+          <button type="submit" class="formulario__btn__enviar" value="enviar">Enviar</button>
+        </div>
 
-                </div>
+        <div class="formulario__grupo formulario__grupo-btn-borrar">
+          <button type="reset" class="formulario__btn__borrar" value="borrar">Borrar</button>
+        </div>
+      </div>
 
-            </div>
+      <!-- Grupo Mensajes  -->
+      <div class="formulario__mensaje" id="formulario__mensaje">
+        <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente.
+        </p>
 
+      </div>
+      <div class="formulario__mensaje-exito" id="formulario__mensaje-exito">
+        <p> ¡Formulario completado con éxito! Muchas Gracias =) </p>
+      </div>
 
-            <div class="item" id="item-email">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
+    </form>
 
-            <div class="item" id="item-operación">
-                <label for="operación">Operación:</label>
-                <select id="operación" name="operación" required>
-                    <option value="" disabled selected>Selecciona una opción</option>
-                    <option value="sacarturno">Sacar turno</option>
-                    <option value="cancelarturno">Cancelar turno</option>
-                </select>
-            </div>
+  </main>
 
-            <div class="item" id="item-fecha">
-                <label for="fecha">Fecha</label>
-                <input type="date" id="fecha" name="fecha" required>
-            </div>
+  <footer>
+    <div class="contenedor">
+      <ul class="iconos-footer">
+        <li><a href="https://web.whatsapp.com/" target="_blank""><i class="fa-brands fa-whatsapp"></i></a></li>
+        <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="https://www.facebook.com/?locale=es_LA"><i class="fa-brands fa-facebook"></i></a></li>
+      </ul>
+    </div>
+  </footer>
 
-            <div class="item" id="item-motivo">
-                <label for="motivo">Motivo:</label>
-                <textarea type="text" id="motivo" name="motivo" required></textarea>
-            </div>
-
-
-            <div class="item">
-                <button class="botonenviar" type="submit" value="Enviar" class="botonenviar">Enviar</button>
-                <button class="botonborrar" type="reset" value="Borrar" class="botonborrar">Borrar</button>
-            </div>
-
-
-
-
-        </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script src="form"></script>
-
-
-
-
-    </body>
+  <script src="form.js"></script>
+  <script src="https://kit.fontawesome.com/1bc252b3cd.js" crossorigin="anonymous"></script>
+</body>
 
 </html>
