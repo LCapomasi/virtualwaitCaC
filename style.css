@@ -316,5 +316,92 @@ body {
     }
   }
 
+  /* Estilos para testimonios */
+
+	.sobrenosotros { 
+		max-width: 1200px;
+		margin: 0 auto;
+		/*padding: 0 1em;*/
+		padding: 20px;
+		/*background-color: #ffffff;
+		/*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+		/*display: flex;*/
+		justify-content: space-between;
+		align-items: center;
+	  }
+	  
+	.sobrenosotros h1 {
+    margin-top: 0;
+    font-size: 20px;
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+  }
   
+  	.sobrenosotros h2 {
+    margin-top: 0;
+    font-size: 20px;
+	margin-top: 20px; 
+    margin-bottom: 20px; 
+  }
+
+	.testimonio {
+	  background-color: #ffffff;
+	  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	  margin-bottom: 20px;
+	  opacity: 0;
+	  transform: translateY(20px);
+	  animation: aparecer 0.5s ease forwards;
+	  padding: 20px; /* Añade margen interno a los lados */
+	}
+
+	.testimonio:hover {
+	  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	  transform: translateY(-2px);
+	}
+
+	.testimonio-contenido {
+	  display: flex;
+	  align-items: center;
+	}
+
+	.testimonio img {
+	  width: 150px;
+	  height: auto;
+	  border-radius: 8px;
+	  margin-right: 20px;
+	}
+
+	.testimonio p {
+	  font-size: 16px;
+	  line-height: 1.5;
+	  margin-top: 10px; 
+	  margin-bottom: 10px; 
+	}
+
+
+	/* Animación para hacer aparecer los testimonios uno tras otro */
+	@keyframes aparecer {
+	  0% {
+		opacity: 0;
+		transform: translateY(20px);
+	  }
+	  100% {
+		opacity: 1;
+		transform: translateY(0);
+	  }
+	}
+
+	/* Retraso individual de cada testimonio (para que aparezca uno desp de otro) */
+	.testimonio:nth-child(1) {
+	  animation-delay: 0s; /* testimonio 1*/
+	}
+
+	.testimonio:nth-child(2) {
+	  animation-delay: 0.5s; /* testimonio 2 */
+	}
+
+	.testimonio:nth-child(3) {
+	  animation-delay: 1s; /* testimonio 3 */
+	}
+
   
