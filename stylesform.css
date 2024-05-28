@@ -201,9 +201,9 @@ body {
     border: 3px solid #bb2929;
  }
      
-/* @media (min-width: 600px) {
+ @media (min-width: 600px) {
     .formulario__grupo {
-     flex: 1 1 calc(50% - 20px); /* 50% width minus the gap *//*
-     }/*
+     flex: 1 1 calc(50% - 20px); /* 50% width minus the gap */
+     }
  }
- /*
+ 
