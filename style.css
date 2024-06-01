@@ -195,6 +195,14 @@ body {
     font-size: 25px;
     animation: fadeInUp 1s ease forwards;
   }
+
+/* Estilos titulo Reserva Turno*/
+ h2{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 25px;
+    animation: fadeInUp 1s ease forwards;
+  }
   
   @keyframes fadeInUp {
     from {
