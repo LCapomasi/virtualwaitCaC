@@ -81,6 +81,7 @@ body {
   position: absolute;
   top: 20px;
   right: 20px;
+  z-index: 999; /* Asegura que el menú esté por encima de otros elementos */
 }
 
 .hamburger-menu .line {
