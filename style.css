@@ -51,8 +51,7 @@ body {
 
   
 .hamburger-menu {
- /* display: none;*/
-  display: flex;
+  display: none;
   flex-direction: column;
   cursor: pointer;
   position: absolute;
@@ -104,8 +103,7 @@ body {
 @media (max-width: 768px) {
 
   .hamburger-menu {
-    /*display: flex;*/
-   position: static;
+   display: flex;
    margin-left: 0;
    margin-right: 20px;
   }
