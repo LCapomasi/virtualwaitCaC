@@ -100,11 +100,14 @@ body {
   font-size: 18px;
 }
 
-/* Responsive styles para menu*/
+/* Responsive styles para menu hamburguesa*/
 @media (max-width: 768px) {
 
   .hamburger-menu {
-    display: flex;
+    /*display: flex;*/
+   position: static;
+   margin-left: 0;
+   margin-right: 20px;
   }
 	
  .menu-de-opciones {
