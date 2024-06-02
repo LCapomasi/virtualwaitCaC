@@ -11,13 +11,21 @@
 	justify-content: space-between;
 	align-items: center;
 }
+
+  /* Estilos titulo Sobre Nosotros*/
+ .sobrenosotros h1{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 25px;
+    animation: fadeInUp 1s ease forwards;
+  }
 	  
-.sobrenosotros h1 {
+/*.sobrenosotros h1 {
     margin-top: 0;
     font-size: 20px;
     margin-top: 20px; 
     margin-bottom: 20px; 
-  }
+  }*/
   
   .sobrenosotros h2 {
     margin-top: 0;
