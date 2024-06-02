@@ -322,6 +322,7 @@ body {
       margin-top: 20px;
     }
   }
+
 /* Estilos titulo Reserva Turno*/
  .reservaTurnos h2{
     text-align: center;
@@ -329,10 +330,16 @@ body {
     font-size: 25px;
     animation: fadeInUp 1s ease forwards;
   }
-  
+
+  /* Estilos titulo Sobre Nosotros*/
+ .sobrenosotros h1{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 25px;
+    animation: fadeInUp 1s ease forwards;
+  }
 
  
-
 	/*.testimonio {
 	  background-color: #ffffff;
 	  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
