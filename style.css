@@ -74,11 +74,6 @@ body {
     transition: font-size 0.3s ease;
   }
   
-  .menu-de-opciones a:hover {
-    color: #007bff; /* Cambia el color al pasar el cursor sobre enlaces*/
-    font-size: 18px;
-  }
-
 .hamburger-menu {
   display: none;
   flex-direction: column;
@@ -88,11 +83,16 @@ body {
   right: 20px;
 }
 
-.hamburger-menu.line {
+.hamburger-menu .line {
   width: 25px;
   height: 3px;
   background-color: #000;
   margin: 4px 0;
+}
+
+.menu-de-opciones a:hover {
+  color: #007bff; /* Cambia el color al pasar el cursor sobre enlaces*/
+  font-size: 18px;
 }
 
 /* Responsive styles */
@@ -110,8 +110,8 @@ body {
     right: 0;
     background-color: #e0aee6;
     width: 200px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 
  .menu-de-opciones.active {
