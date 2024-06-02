@@ -380,7 +380,11 @@ body {
 	}
 
 	/* Retraso individual de cada testimonio (para que aparezca uno desp de otro) */
-	.testimonios .card:nth-child(1) {
+.card { 
+	animation: aparecer 0.5 ease-in-out
+}
+
+	.card:nth-child(1) {
 	  animation-delay: 0s; /* testimonio 1*/
 	}
 
