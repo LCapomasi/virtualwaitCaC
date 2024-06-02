@@ -331,14 +331,6 @@ body {
     animation: fadeInUp 1s ease forwards;
   }
 
-  /* Estilos titulo Sobre Nosotros*/
- .sobrenosotros h1{
-    text-align: center;
-    margin-top: 40px;
-    font-size: 25px;
-    animation: fadeInUp 1s ease forwards;
-  }
-
  
 	/*.testimonio {
 	  background-color: #ffffff;
