@@ -58,11 +58,11 @@ body {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex;
+    /*display: flex;*/
   }
 
   .menu-de-opciones li {
-    margin: 0 10px;
+    margin-bottom: 10px;
   }
   
   .menu-de-opciones a {
@@ -81,7 +81,6 @@ body {
   position: absolute;
   top: 20px;
   right: 20px;
-  z-index: 999; /* Asegura que el menú esté por encima de otros elementos */
 }
 
 .hamburger-menu .line {
@@ -106,13 +105,15 @@ body {
  .menu-de-opciones {
     display: none;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     top: 70px;    /* Adjust as needed */
     right: 0;
     background-color: #e0aee6;
     width: 200px;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 999; /* Asegura que el menú esté por encima de otros elementos */
+	 
   }
 
  .menu-de-opciones.active {
