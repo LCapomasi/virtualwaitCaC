@@ -72,8 +72,6 @@ body {
     font-size: 24px;
   }
 
-
-
   .menu-de-opciones ul {
     list-style-type: none;
     padding: 0;
@@ -104,8 +102,6 @@ body {
 
   .hamburger-menu {
    display: flex;
-   margin-left: 0;
-   margin-right: 20px;
   }
 	
  .menu-de-opciones {
