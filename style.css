@@ -83,6 +83,9 @@ body {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 .hamburger-menu.line {
@@ -94,15 +97,25 @@ body {
 
 /* Responsive styles */
 @media (max-width: 768px) {
-  .menu-de-opciones {
+
+  .hamburger-menu {
+    display: flex;
+  }
+	
+ .menu-de-opciones {
     display: none;
     flex-direction: column;
-    width: 100%;
-    background-color: #e0aee6;
     position: absolute;
     top: 70px;    /* Adjust as needed */
-    left: 0;
-    padding: 10px 0;
+    right: 0;
+    background-color: #e0aee6;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+
+ .menu-de-opciones.active {
+    display: flex;
   }
 
   .menu-de-opciones ul {
@@ -114,13 +127,6 @@ body {
     text-align: center;
   }
 
-  .hamburger-menu {
-    display: flex;
-  }
-
-  .menu-de-opciones.active {
-    display: flex;
-  }
 }
 
 .menu-de-opciones a {
