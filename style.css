@@ -51,12 +51,14 @@ body {
 
   
 .hamburger-menu {
-  display: none;
+ /* display: none;*/
+  display: flex;
   flex-direction: column;
   cursor: pointer;
   position: absolute;
   top: 20px;
   right: 20px;
+  margin-left: auto;
 }
 
 .hamburger-menu .line {
