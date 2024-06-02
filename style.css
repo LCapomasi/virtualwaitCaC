@@ -49,10 +49,29 @@ body {
     cursor: pointer;
   }
 
+  
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.hamburger-menu .line {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 4px 0;
+}
+
   .nombre-empresa {
     margin: 0;
     font-size: 24px;
   }
+
+
 
   .menu-de-opciones ul {
     list-style-type: none;
@@ -73,29 +92,13 @@ body {
     font-size: 16px;
     transition: font-size 0.3s ease;
   }
-  
-.hamburger-menu {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
-.hamburger-menu .line {
-  width: 25px;
-  height: 3px;
-  background-color: #000;
-  margin: 4px 0;
-}
 
 .menu-de-opciones a:hover {
   color: #007bff; /* Cambia el color al pasar el cursor sobre enlaces*/
   font-size: 18px;
 }
 
-/* Responsive styles */
+/* Responsive styles para menu*/
 @media (max-width: 768px) {
 
   .hamburger-menu {
@@ -186,7 +189,8 @@ body {
 }
 /*fin de Responsive style*/
 
-/* Secciones de contenido*/
+
+/* Secciones de contenido de inicio*/
 
   .centrado { 
     max-width: 1200px;
@@ -249,51 +253,53 @@ body {
   .parrafo img:hover {
     transform: scale(1.1);
   }
+/* Fin estilos de Inicio*/
 
- /* Estilos para el footer*/
-  footer { 
-    background-color: #e0aee6;
-    color:#fff;
-    padding: 20px 0; /*Espaciado interno (abajo, arriba, izq y der)*/
+/* Estilos para Sobre Nosotros en aboutus.css*/
 
+/* Animación para hacer aparecer los testimonios uno tras otro */
+@keyframes aparecer {
+  0% {
+	opacity: 0;
+	transform: translateY(20px);
+   }
+     100% {
+	 opacity: 1;
+	 transform: translateY(0);
+	}
+   }
+
+/* Retraso individual de cada testimonio (para que aparezca uno desp de otro) */
+
+.testimonios .card:nth-child(1) {
+  animation: aparecer 0.5 ease-in-out 1s;
+  /* animation-delay: 0s;*/
+  /* testimonio 1*/
+}
+
+.testimonios .card:nth-child(2) {
+  animation: aparecer 0.5 ease-in-out 1.5s;
+ /*  animation-delay: 0.5s; */
+ /* testimonio 2 */
+}
+
+ .testimonios .card:nth-child(3) {
+   animation: aparecer 0.5 ease-in-out 2s;
+  /* animation-delay: 1s;*/
+   /* testimonio 3 */
+}
+/* Fin Animaciones de Testimonios*/
+
+/* Estilos titulo Reserva Turno*/
+ .reservaTurnos h2{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 25px;
+    animation: fadeInUp 1s ease forwards;
   }
-  .contenedor {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+/* Fin estilo Titulo Reserva Turno*/
 
-  .iconos-footer {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-  }
-
-  .iconos-footer li {
-    margin-right: 15px; /* Espacio entre elementos*/
-  }
-
-  .iconos-footer li:last-child {
-    margin-right: 0; /* Elimina el margen derecho del ultimo elemento*/   
-  }
-
-  .iconos-footer a {
-    color:  #333333;
-    text-decoration: none;
-    font-size: 20px;
-    transition: opacity 0.3s ease; /*agrega transicion a la opacidad*/
-  }
-
-  .iconos-footer a:hover {
-    opacity: 0.7;
-  }
-
-  
-  /*Estilos de Preguntas Frecuentes*/
+/*Estilos de Preguntas Frecuentes*/
 
   h2{
     text-align: center;
@@ -340,6 +346,50 @@ body {
     margin-bottom: 0;
    /* margin-left: 20px;*/
   }
+/*Fin de estilos Preguntas Frecuentes*/
+
+/* Estilos para el footer*/
+  footer { 
+    background-color: #e0aee6;
+    color:#fff;
+    padding: 20px 0; /*Espaciado interno (abajo, arriba, izq y der)*/
+
+  }
+  .contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .iconos-footer {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+
+  .iconos-footer li {
+    margin-right: 15px; /* Espacio entre elementos*/
+  }
+
+  .iconos-footer li:last-child {
+    margin-right: 0; /* Elimina el margen derecho del ultimo elemento*/   
+  }
+
+  .iconos-footer a {
+    color:  #333333;
+    text-decoration: none;
+    font-size: 20px;
+    transition: opacity 0.3s ease; /*agrega transicion a la opacidad*/
+  }
+
+  .iconos-footer a:hover {
+    opacity: 0.7;
+  }
+/* Fin estilos para Footer*/
 
   /* Media Queries para tamaños de pantalla */
   @media screen and (max-width: 768px) {
@@ -428,83 +478,4 @@ body {
       margin-top: 20px;
     }
   }
-
-/* Estilos titulo Reserva Turno*/
- .reservaTurnos h2{
-    text-align: center;
-    margin-top: 40px;
-    font-size: 25px;
-    animation: fadeInUp 1s ease forwards;
-  }
-
- 
-	/*.testimonio {
-	  background-color: #ffffff;
-	  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	  margin-bottom: 20px;
-	  opacity: 0;
-	  transform: translateY(20px);
-	  animation: aparecer 0.5s ease forwards;
-	  padding: 20px; /* Añade margen interno a los lados */
-	}
-
-	/*.testimonio:hover {
-	  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-	  transform: translateY(-2px);
-	}
-
-	.testimonio-contenido {
-	  display: flex;
-	  align-items: center;
-	}
-
-	.testimonio img {
-	  width: 150px;
-	  height: auto;
-	  border-radius: 8px;
-	  margin-right: 20px;
-	}
-
-	.testimonio p {
-	  font-size: 16px;
-	  line-height: 1.5;
-	  margin-top: 10px; 
-	  margin-bottom: 10px; 
-	}*/
-
-/* Animación para hacer aparecer los testimonios uno tras otro */
-@keyframes aparecer {
-  0% {
-	opacity: 0;
-	transform: translateY(20px);
-   }
-     100% {
-	 opacity: 1;
-	 transform: translateY(0);
-	}
-   }
-
-/* Retraso individual de cada testimonio (para que aparezca uno desp de otro) */
-
-.testimonios .card:nth-child(1) {
-  animation: aparecer 0.5 ease-in-out 1s;
-  /* animation-delay: 0s;*/
-  /* testimonio 1*/
-}
-
-.testimonios .card:nth-child(2) {
-  animation: aparecer 0.5 ease-in-out 1.5s;
- /*  animation-delay: 0.5s; */
- /* testimonio 2 */
-}
-
- .testimonios .card:nth-child(3) {
-   animation: aparecer 0.5 ease-in-out 2s;
-  /* animation-delay: 1s;*/
-   /* testimonio 3 */
-}
-
-  
-
-
-	
+/* Fin Media Querys*/
