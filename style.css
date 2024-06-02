@@ -62,7 +62,7 @@ body {
   }
 
   .menu-de-opciones li {
-    margin-right: 20px;
+    margin: 0 10px;
   }
   
   .menu-de-opciones a {
@@ -79,8 +79,106 @@ body {
     font-size: 18px;
   }
 
-  
-  /* Secciones de contenido*/
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger-menu .line {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 4px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .menu-de-opciones {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #e0aee6;
+    position: absolute;
+    top: 70px;    /* Adjust as needed */
+    left: 0;
+    padding: 10px 0;
+  }
+
+  .menu-de-opciones ul {
+    flex-direction: column;
+  }
+
+  .menu-de-opciones li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .menu-de-opciones.active {
+    display: flex;
+  }
+}
+
+.menu-de-opciones a {
+  display: block;
+  text-decoration: none;
+  color: #333333;
+  padding: 0.5em 1em;
+  font-size: 16px;
+  transition: font-size 0.3s ease;
+}
+
+.menu-de-opciones a:hover {
+  color: #007bff;
+  /* Cambia el color al pasar el cursor sobre enlaces*/
+  font-size: 18px;
+}
+
+
+.site-branding img {
+  padding: 3px;
+  border-radius: 50%;
+  /*crea un borde redondo */
+  background-color: transparent;
+  width: 100px;
+  /* Ajusta el tamano del logo segun sea necesario*/
+}
+
+.logo-enlace {
+  display: inline-block;
+  padding: 10px;
+}
+
+.logo-enlace img {
+  width: 100px;
+  animation: aparecer 1s ease-in-out alternate infinite;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.logo-enlace:hover {
+  cursor: pointer;
+}
+
+.nombre-empresa {
+  margin: 0;
+  font-size: 24px;
+}
+/*fin de Responsive style*/
+
+/* Secciones de contenido*/
 
   .centrado { 
     max-width: 1200px;
