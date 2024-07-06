@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Turnos</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stylesform.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-ico">
+</head>
+<body>
+  <div class="centrado">
+    <header class="encabezado">
+      <div class="site-branding">
+        <a href="../index.html" class="logo-enlace">
+          <img src="images/logovirtual-wait.png" alt="logo">
+        </a>
+       </div>
+       <div class="hamburger-menu" id="hamburger-menu">
+         <div class="line"></div>
+         <div class="line"></div>
+         <div class="line"></div>
+      </div>
+      <h2 class="nombre-empresa"> Virtual Wait </h2>
+      <nav class="menu-de-opciones">
+        <ul>
+          <li><a href="index.html" class="logo-enlace">Inicio</a></li>
+          <li><a href="SobreNosotros.html">Sobre Nosotros</a></li>
+          <li><a href="ReservarTurno.html">Reservar Turno</a></li>
+          <li><a href="#">Mis Turnos</a></li>
+          <li><a href="PreguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+        </ul>
+       </nav>
+     </header>
+   <main>
+       <div class="misTurnos">
+        <h2> Mis Turnos </h2>
+       </div>
+
+     <form action="" class="formulario" id="formulario">
+
+      <!-- Grupo: DNI -->
+      <div class="formulario__grupo" id="grupo__dni">
+        <label for="dni" class="formulario__label">DNI</label>
+        <div class="formulario__grupo-input">
+          <input type="text" class="formulario__input" name="dni" id="dni">
+        </div>
+      </div>
+
+      <!-- Grupo botones -->
+      <div class="formulario__grupo" id="grupo__botones">
+        <div class="formulario__grupo formulario__grupo-btn-enviar">
+          <button type="submit" class="formulario__btn__enviar" value="enviar">Buscar turno</button>
+        </div>
+
+        <div class="formulario__grupo formulario__grupo-btn-borrar">
+          <button type="reset" class="formulario__btn__borrar" value="borrar">Cancelar turno</button>
+        </div>
+      </div>
+
+    </form>
+
+  </main>
+    <br>
+    <br>
+  <footer>
+    <div class="contenedor">
+      <ul class="iconos-footer">
+        <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="https://kit.fontawesome.com/1bc252b3cd.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
