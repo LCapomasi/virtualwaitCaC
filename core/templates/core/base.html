@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Inicio{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+  {% block links %}
+  {% endblock%}
+  <link rel="icon" href="{% static 'core/images/favicon.ico' %}" type="image/x-ico">
+</head>
+<body>
+  <div class="centrado">
+    <header class="encabezado">
+      <div class="site-branding">
+        <a href="{% url 'home' %}" class="logo-enlace">
+          <img src="{% static 'core/images/logovirtual-wait.png' %}" alt="logo">
+        </a>
+      </div>
+      <div class="hamburger-menu" id="hamburger-menu">
+         <div class="line"></div>
+         <div class="line"></div>
+         <div class="line"></div>
+      </div>  
+      <h2 class="nombre-empresa">Virtual Wait</h2>
+      <nav class="menu-de-opciones">
+        <ul>
+          <li><a href="{% url 'home' %}" class="logo-enlace">Inicio</a></li>
+          <li><a href="{% url 'sobre_nosotros' %}">Sobre Nosotros</a></li>
+          <li><a href="{% url 'reservar_turno' %}">Reservar Turno</a></li>
+          <li><a href="{% url 'mis_turnos' %}">Mis Turnos</a></li>
+          <li><a href="{% url 'preguntas_frecuentes' %}">Preguntas Frecuentes</a></li>
+        </ul>
+      </nav>
+    </header>
+    {% block content %}
+    {% endblock %}
+    <footer>
+      <div class="contenedor">
+        <ul class="iconos-footer">
+          <li><a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>  
+          <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li> 
+          <li><a href="https://www.facebook.com/?locale=es_LA" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+        </ul> 
+      </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/f15d83242b.js" crossorigin="anonymous"></script>
+    <script src="{% static 'core/js/menuham.js' %}"></script>
+    {% block scripts %}
+    {% endblock%}
+  </div>
+</body>
+</html>
