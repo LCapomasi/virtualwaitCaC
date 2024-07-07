@@ -1,0 +1,40 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<main>
+  <div class="centrado">
+    <div class="parrafos">
+      <article class="parrafo">
+        <div class="parrafo-contenido">
+          <h1>Reserva en minutos</h1>
+          <p> En Virtual Wait, entendemos lo valioso que es tu tiempo. Por eso, nuestro sistema te permite reservar tu turno médico de forma rápida y sencilla, evitando largas esperas en la sala.</p>
+        </div>
+        <figure>
+          <img src="{% static 'core/images/image1.jpg' %}" alt="imagen 1">
+        </figure>
+      </article>
+      <article class="parrafo">
+        <div class="parrafo-contenido">
+          <h1>Acceso rápido a la atención</h1>
+          <p>Nuestra plataforma te brinda acceso rápido a la atención médica que necesitas, evitando demoras y agilizando el proceso de consulta con profesionales de la salud.</p>
+        </div><br>
+        <figure>
+          <img src="{% static 'core/images/image2.jpg' %}" alt="imagen 2">
+        </figure>
+      </article>
+      <article class="parrafo">
+        <div class="parrafo-contenido">
+          <h1>Gestiona tu tiempo</h1>
+          <p>Con Virtual Wait, puedes organizar tus visitas médicas de manera eficiente, recibiendo recordatorios automáticos en tu celular y por correo electrónico para que no olvides tus turnos, optimizando así tu agenda.</p>
+        </div>
+        <figure>
+          <img src="{% static 'core/images/image3.jpg' %}" alt="imagen 3">
+        </figure>
+      </article>
+    </div>
+  </div>
+</main>
+{% endblock %}
