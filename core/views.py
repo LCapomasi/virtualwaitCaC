@@ -4,8 +4,6 @@ from django.shortcuts import render
 def home(request):
     return render(request, 'core/index.html')
 
-def sobre_nosotros(request):
-    return render(request, 'core/SobreNosotros.html')
 
 def reservar_turno(request):
     return render(request, 'core/ReservarTurno.html')
