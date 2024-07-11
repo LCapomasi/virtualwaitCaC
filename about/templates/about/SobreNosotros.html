@@ -16,64 +16,23 @@
 <strong>Virtual Wait</strong> es una plataforma innovadora diseñada para simplificar la gestión de citas médicas. Nuestro objetivo es proporcionar una solución eficiente y conveniente tanto para los profesionales de la salud como para los pacientes. Con Virtual Wait, puedes reservar fácilmente tus citas médicas desde cualquier lugar, ahorrando tiempo y simplificando tu experiencia de programación. Nos esforzamos por ofrecer un servicio de calidad, respaldado por una interfaz intuitiva y un equipo de soporte dedicado. 
 </p> 
    </div>
-{% for project in projects %} 
-  <div class="testimonios">
+   <div class="testimonios">
 <h2>Testimonios de Usuarios</h2>
+{% for project in projects %} 
 <div class="card">
       <figure class="card-image">
-        <img src="{{project.image.url}}" alt="Testimonio 1">
+        <img src="{{project.image.url}}" alt="Testimonio">
         <figcaption><strong>{{project.title}}</strong><br>
-          <em>Especialista en Medicina Familiar</em>
+          <em>{{project.role}}</em>
         </figcaption>
       </figure>
       <div class="card-content">
         <p>{{project.description}}</p>
       </div>
     </div>
-
-<div class="card">
-      <figure class="card-image">
-        <img src="{{project.image.url}}" alt="Testimonio 2">
-        <figcaption><strong>{{project.title}}</strong><br>
-          <em>Empleada Administrativa en Clínica Argentina</em>
-        </figcaption>
-      </figure>
-      <div class="card-content">
-        <p>Como administrativa y recepcionista en una clínica médica, he visto de primera mano cómo Virtual Wait
-          ha
-          mejorado la eficiencia de nuestro trabajo. Esta plataforma nos permite gestionar las citas de manera más
-          organizada y efectiva, lo que reduce las confusiones y los errores en la programación. Además, nuestros
-          pacientes aprecian la conveniencia de poder reservar sus citas en línea, lo que libera tiempo en nuestra
-          línea telefónica y nos permite enfocarnos en brindar un excelente servicio. ¡Estoy muy contenta de
-          contar
-          con Virtual Wait en nuestra clínica!
-        </p>
-      </div>
-    </div>
-
-<div class="card">
-      <figure class="card-image">
-        <img src="{% static 'core/images/testimonio3.jpg' %}" alt="Testimonio 3">
-        <figcaption><strong>Aldana Cejas</strong><br>
-          <em>Paciente</em>
-        </figcaption>
-      </figure>
-      <div class="card-content">
-        <p>Como una mujer con múltiples responsabilidades y poco tiempo libre, Virtual Wait ha sido una
-          bendición
-          para mí. Con esta plataforma, puedo reservar mis citas médicas de manera rápida y conveniente, sin
-          tener
-          que preocuparme por largas esperas en la línea telefónica o tratar de coordinar horarios complicados.
-          La
-          interfaz es fácil de usar y me permite administrar mis citas desde cualquier lugar, en cualquier
-          momento.
-          ¡Realmente ha simplificado mi vida!
-        </p>
-      </div>
-    </div>
+{% endfor %} 
   </div>       		 
 </main>
-{% endfor %} 
 {% endblock %}
 	 
       
