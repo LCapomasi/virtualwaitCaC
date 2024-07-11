@@ -3,7 +3,7 @@ from .models import Project
 
 # Create your views here.
 
-def sobre_nosotros(request):
+def reserva_turnos(request):
     projects = Project.objects.all()
-    return render(request, 'about/SobreNosotros.html', {'projects':projects})
+    return render(request, 'about/ReservarTurnos.html', {'projects':projects})
 
