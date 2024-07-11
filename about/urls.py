@@ -5,7 +5,7 @@ from django.conf import settings
 urlpatterns = [
 
     # Asegúrate de agregar rutas para las otras páginas
-    path('sobre-nosotros/', views.sobre_nosotros, name='sobre_nosotros'),
+    path('reserva-turnos/', views.reserva_turnos, name='reserva_turnos'),
     
 ]
 
