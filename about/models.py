@@ -9,10 +9,17 @@ class Turno(models.Model):
     ]
 
     OPERACION_CHOICES = [
-        ('sacarturno', 'Sacar turno'),
-        ('cancelarturno', 'Cancelar turno'),
+        ('cardiología', 'Cardiología),
+        ('clinicamedica','Clínica Médica'),
+        ('dermatologia','Dermatología'),
+        ('ginecologia','Ginecología'),
+        ('hepatologia','Hepatología'),
+        ('oftalmologia','Ofatalmología'),
+        ('otorrinolaringologia','Otorrinolaringología'),
+        ('traumatologia','Traumatología'),
+        ('urologia','Urología') 
     ]
-
+    
     nombre = models.CharField(max_length=100)
     apellido = models.CharField(max_length=100)
     edad = models.PositiveIntegerField()
