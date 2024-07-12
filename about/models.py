@@ -1,35 +1,18 @@
 from django.db import models
 
 # Create your models here.
-class Turno(models.Model):
-    SEXO_CHOICES = [
-        ('Femenino', 'Femenino'),
-        ('Masculino', 'Masculino'),
-        ('Otro', 'Otro'),
-    ]
-
-    OPERACION_CHOICES = [
-        ('cardiología', 'Cardiología),
-        ('clinicamedica','Clínica Médica'),
-        ('dermatologia','Dermatología'),
-        ('ginecologia','Ginecología'),
-        ('hepatologia','Hepatología'),
-        ('oftalmologia','Ofatalmología'),
-        ('otorrinolaringologia','Otorrinolaringología'),
-        ('traumatologia','Traumatología'),
-        ('urologia','Urología') 
-    ]
+class Project(models.Model):
+    title = models.CharField(max_length=200, verbose_name="Titulo")
+    description = models.TextField(verbose_name= "Descripcion")
+    image = models.ImageField(verbose_name="Imagen", upload_to="projects")
+    role = models.CharField(max_length=100, default='Unknown Role') # Nuevo campo para "role"
+   
+   # created = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creacion")
+   # update = models.DateTimeField(auto_now=True, verbose_name="Fecha de modificacion")
     
-    nombre = models.CharField(max_length=100)
-    apellido = models.CharField(max_length=100)
-    edad = models.PositiveIntegerField()
-    dni = models.CharField(max_length=20)
-    sexo = models.CharField(max_length=10, choices=SEXO_CHOICES)
-    email = models.EmailField()
-    operacion = models.CharField(max_length=20, choices=OPERACION_CHOICES)
-    fecha = models.DateField()
-    motivo = models.TextField()
-    terminos = models.BooleanField()
-
-    def __str__(self):
-        return f"{self.nombre} {self.apellido} - {self.operacion}"
+    def __str__(self) :
+        return self.title
+    
+    class Meta:
+        verbose_name = "proyecto"
+        verbose_name_plural = "proyectos"
