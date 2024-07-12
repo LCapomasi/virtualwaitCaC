@@ -1,6 +1,7 @@
+from django.urls import path
+from . import views
+from django.conf import settings 
 
-<<<<<<< HEAD
-=======
 urlpatterns = [
     path('', views.home, name='home'),
     # Asegúrate de agregar rutas para las otras páginas
@@ -10,4 +11,3 @@ urlpatterns = [
 if settings.DEBUG:
     from django.conf.urls.static import static
     urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
->>>>>>> 81698c865784b87c2e1811058eec02ec610a2472

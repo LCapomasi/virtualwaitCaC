@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'about.apps.AboutConfig',
+    'reservaturnos.apps.reservaturnosConfig',
     'bootstrap5',
 ]
 

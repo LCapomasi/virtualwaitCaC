@@ -6,5 +6,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls')),
     path('', include('about.urls')),
+     path('', include('reservaturnos.urls')),
     #path('sobre-nosotros/', views.sobre_nosotros, name='sobre_nosotros')
 ] 
