@@ -1,0 +1,73 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Mis Turnos{% endblock %}
+{% block links %}
+<link rel="stylesheet" href="{% static 'reservaturnos/css/stylesform.css' %}">
+{% endblock%}
+{% block content %}
+<main>
+  <div class="misTurnos">
+      <h2> Mis Turnos </h2>
+  </div>
+
+  <form action="{% url 'mis_turnos' %}" method="post" class="formulario" id="formulario">
+      {% csrf_token %}
+      <!-- Grupo: DNI -->
+      <div class="formulario__grupo" id="grupo__dni">
+          <label for="dni" class="formulario__label">DNI</label>
+          <div class="formulario__grupo-input">
+              <input type="text" class="formulario__input" name="dni" id="dni">
+          </div>
+      </div>
+
+      <!-- Grupo botones -->
+      <div class="formulario__grupo" id="grupo__botones">
+          <div class="formulario__grupo formulario__grupo-btn-enviar">
+              <button type="submit" class="formulario__btn__enviar" value="enviar">Buscar turno</button>
+          </div>
+
+          <div class="formulario__grupo formulario__grupo-btn-borrar">
+              <button type="reset" class="formulario__btn__borrar" value="borrar">Cancelar turno</button>
+          </div>
+      </div>
+  </form>
+
+  <br>
+  <br>
+  
+  {% if request.method == "POST" %}
+
+  {% if turnos %}
+      <div class="resultados">
+          <h3>Resultados de la Búsqueda</h3>
+          <ul>
+              {% for turno in turnos %}
+                  <li>
+                      <strong>Nombre:</strong> {{ turno.nombre }}<br>
+                      <strong>Apellido:</strong> {{ turno.apellido }}<br>
+                      <strong>Edad:</strong> {{ turno.edad }}<br>
+                      <strong>DNI:</strong> {{ turno.dni }}<br>
+                      <strong>Sexo:</strong> {{ turno.sexo }}<br>
+                      <strong>Email:</strong> {{ turno.email }}<br>
+                      <strong>Operación:</strong> {{ turno.operacion }}<br>
+                      <strong>Fecha:</strong> {{ turno.fecha }}<br>
+                      <strong>Motivo:</strong> {{ turno.motivo }}<br>
+                      <strong>Términos:</strong> {{ turno.terminos }}
+                  </li>
+              {% endfor %}
+          </ul>
+      </div>
+  {% else %}
+      <p>No se encontraron turnos con ese DNI.</p>
+  {% endif %}
+
+  {% endif %}
+
+
+</main>
+
+<br>
+<br>
+{% endblock %}
+

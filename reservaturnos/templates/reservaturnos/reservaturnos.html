@@ -1,0 +1,129 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Reservar Turno{% endblock %}
+{% block links %}
+<link rel="stylesheet" href="{% static 'reservaturnos/css/stylesform.css' %}">
+{% endblock%}
+{% block content %}
+<main>
+  <div class="reservaTurnos">
+   <h2> Reserva de Turnos </h2>
+  </div>
+
+  <form method="post" class="formulario" id="formulario">
+    {% csrf_token %}
+    <!-- Grupo: Nombre -->
+    <div class="formulario__grupo" id="grupo__nombre">
+        <label for="nombre" class="formulario__label">Nombre</label>
+        <div class="formulario__grupo-input">
+            {{ form.nombre }}
+        </div>
+    </div>
+
+    <!-- Grupo: Apellido -->
+    <div class="formulario__grupo" id="grupo__apellido">
+        <label for="apellido" class="formulario__label">Apellido</label>
+        <div class="formulario__grupo-input">
+            {{ form.apellido }}
+        </div>
+    </div>
+
+    <!-- Grupo: Edad -->
+    <div class="formulario__grupo" id="grupo__edad">
+        <label for="edad" class="formulario__label">Edad</label>
+        <div class="formulario__grupo-input">
+            {{ form.edad }}
+        </div>
+    </div>
+
+    <!-- Grupo: DNI -->
+    <div class="formulario__grupo" id="grupo__dni">
+        <label for="dni" class="formulario__label">DNI</label>
+        <div class="formulario__grupo-input">
+            {{ form.dni }}
+        </div>
+    </div>
+
+<!-- Grupo: Sexo -->
+<div class="formulario__grupo" id="grupo__sexo">
+    <label class="formulario__label">Sexo</label>
+    <div class="formulario__input">
+        {% for radio in form.sexo %}
+            <input type="radio" id="sexo-{{ radio.choice_value }}" name="{{ radio.name }}" value="{{ radio.choice_value }}" {% if radio.choice_value == form.sexo.value %}checked{% endif %}>
+            <label for="sexo-{{ radio.choice_value }}" class="labelsexo">{{ radio.choice_label }}</label>
+        {% endfor %}
+    </div>
+</div>
+
+    <!-- Grupo: Correo Electrónico -->
+    <div class="formulario__grupo" id="grupo__email">
+        <label for="email" class="formulario__label">Email</label>
+        <div class="formulario__grupo-input">
+            {{ form.email }}
+        </div>
+    </div>
+
+    <!-- Grupo: Operación -->
+    <div class="formulario__grupo" id="grupo__operacion">
+        <label for="operacion" class="formulario__label">Operación</label>
+        <div class="formulario__grupo-input">
+            {{ form.operacion }}
+        </div>
+    </div>
+
+    <!-- Grupo: Fecha -->
+    <div class="formulario__grupo" id="grupo__fecha">
+        <label for="fecha" class="formulario__label">Fecha</label>
+        <div class="formulario__grupo-input">
+            {{ form.fecha }}
+        </div>
+    </div>
+
+    <!-- Grupo: Motivo -->
+    <div class="formulario__grupo" id="grupo__motivo">
+        <label for="motivo" class="formulario__label">Motivo</label>
+        <div class="formulario__grupo-input">
+            {{ form.motivo }}
+        </div>
+        <div id="contador" class="contador">300 caracteres restantes</div>
+    </div>
+
+    <!-- Grupo: Términos y Condiciones -->
+    <div id="grupo__terminos">
+        <label class="formulario__label_terminos">
+            {{ form.terminos }}
+            Acepto los Términos y Condiciones
+        </label>
+    </div>
+
+    <!-- Grupo botones -->
+    <div class="formulario__grupo" id="grupo__botones">
+        <div class="formulario__grupo formulario__grupo-btn-enviar">
+            <button type="submit" class="formulario__btn__enviar" value="enviar">Enviar</button>
+        </div>
+
+        <div class="formulario__grupo formulario__grupo-btn-borrar">
+            <button type="reset" class="formulario__btn__borrar" value="borrar">Borrar</button>
+        </div>
+    </div>
+
+    <!-- Grupo Mensajes  -->
+    <div class="formulario__mensaje" id="formulario__mensaje">
+        <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente.</p>
+    </div>
+    <div class="formulario__mensaje-exito" id="formulario__mensaje-exito">
+        <p> ¡Formulario completado con éxito! Muchas Gracias =) </p>
+    </div>
+</form>
+
+</main>
+<br>
+<br>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'reservaturnos/js/form.js' %}"></script>
+{% endblock%}
+	 
+      
