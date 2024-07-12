@@ -11,7 +11,7 @@
    <h2> Reserva de Turnos </h2>
   </div>
 
-  <form method="post" class="formulario" id="formulario">
+  <form action="{% url 'reserva_turnos' %}" method="post" class="formulario" id="formulario">
     {% csrf_token %}
     <!-- Grupo: Nombre -->
     <div class="formulario__grupo" id="grupo__nombre">
@@ -68,7 +68,7 @@
 
     <!-- Grupo: Operación -->
     <div class="formulario__grupo" id="grupo__operacion">
-        <label for="operacion" class="formulario__label">Operación</label>
+        <label for="operacion" class="formulario__label">Especialidad</label>
         <div class="formulario__grupo-input">
             {{ form.operacion }}
         </div>

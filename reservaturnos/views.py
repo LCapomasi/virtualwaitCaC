@@ -8,9 +8,9 @@ def reserva_turnos (request):
         form = TurnoForm(request.POST)
         if form.is_valid():
             form.save()
-            return render(request, 'formulario_exito.html')
-        else:
-            return render(request, 'reservaturnos/reservaturnos.html', {'form': form})
+        form = TurnoForm()
+        return render(request, 'reservaturnos/reservaturnos.html', {'form': form})
+        
     else:
         form = TurnoForm()
         return render(request, 'reservaturnos/reservaturnos.html', {'form': form})

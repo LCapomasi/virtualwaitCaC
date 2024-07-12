@@ -64,7 +64,7 @@ inputs.forEach((input) => {
     input.addEventListener('blur', validarFormulario);
 });
 
-formulario.addEventListener('submit', (e) => {
+/*formulario.addEventListener('submit', (e) => {
     e.preventDefault();
 
     // debugger
@@ -89,4 +89,4 @@ formulario.addEventListener('submit', (e) => {
     } else {
         document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
     }
-});
+});*/
