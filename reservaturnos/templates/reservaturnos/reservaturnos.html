@@ -50,8 +50,10 @@
     <label class="formulario__label">Sexo</label>
     <div class="formulario__input">
         {% for radio in form.sexo %}
-            <input type="radio" id="sexo-{{ radio.choice_value }}" name="{{ radio.name }}" value="{{ radio.choice_value }}" {% if radio.choice_value == form.sexo.value %}checked{% endif %}>
+        {% if forloop.counter > 1 %}
+            <input type="radio" id="sexo-{{ radio.choice_value }}" name="grupo__sexo" value="{{ radio.choice_value }}">
             <label for="sexo-{{ radio.choice_value }}" class="labelsexo">{{ radio.choice_label }}</label>
+            {% endif %}
         {% endfor %}
     </div>
 </div>
